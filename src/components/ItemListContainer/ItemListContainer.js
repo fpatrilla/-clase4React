@@ -4,13 +4,18 @@ import { ItemCount } from '../ItemCount/ItemCount';
 
 
 
-const ItemListContainer = (props) => {
 
+const ItemListContainer = (props) => {
+	
 
 	return (
-		<div className='ItemListContainer'>
+		
+		<div>
+			<div className='ItemListContainer'>
 			<h2>{props.title}</h2>
-		<ItemCount/>
+			
+		</div>
+		<ItemCount initial={1}  stock={7} onAdd={""}  />
 		</div>
 		
 	);
