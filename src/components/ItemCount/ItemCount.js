@@ -5,13 +5,13 @@ export function ItemCount(props) {
   // Declaración de una variable de estado que llamaremos "count"
   
   const [count , setCount ] = useState(props.initial)
-  const [stock ] = useState(props.stock)
+  
  
   
   
   const agregar = () =>{
 
-    if (stock >= count) {
+    if (props.stock >= count) {
 		setCount(count + 1)}
 		 else {
 		console.log('no hay mas productos');
@@ -50,7 +50,7 @@ export function ItemCount(props) {
 	  
         Quitar
       </button>
-	  <button  className='item' onClick={props.onAdd}>Agrear A carrtio</button>
+	  <button  className='item' onClick={()=>props.onAdd(count)}>Agrear A carrtio</button>
 	  
 	  <div className='count'>{count}</div>
 	  
